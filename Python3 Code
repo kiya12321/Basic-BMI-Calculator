@@ -1,0 +1,78 @@
+# Homework 3: Body Mass Index Calculator (Exercise 6)
+# BMI=Weight*703/Height**2
+
+def main():
+    """Main functions of code defined"""
+    # Variables
+    name = ""
+    sex = ""
+    age = 0
+    weight = 0
+    height = 0
+    bmi = 0
+    bmi_child = 0
+    bmi_adult = 0
+    bmi_output = 0
+
+
+# Information Input
+name = input("Name: ")
+sex = input("Sex: ")
+age = float(input("Age: "))
+weight = float(input("Weight(lb): "))
+height = float(input("Height(in): "))
+
+# BMI Calculation
+bmi = weight * 703 / height ** 2
+
+main()
+
+
+# Data output for adults
+def bmi_adult():
+    """Defines BMI calculation for adults"""
+    if bmi <= 18.5:
+        print("\nYou are underweight, your BMI is %0.0f" % (bmi))
+    elif bmi > 18.5 and bmi <= 24.9:
+        print("\nYou are at a normal weight, your BMI is %0.0f" % (bmi))
+    elif bmi > 24.9 and bmi <= 29.9:
+        print("\nYou are overweight, your BMI is %0.0f" % (bmi))
+    elif bmi >= 30:
+        print("\nYou are obese, your BMI is %0.0f" % (bmi))
+    else:
+        print("Insufficient data, input information again.")
+
+
+bmi_adult()
+
+
+# Data output for children
+def bmi_child():
+    """Defines BMI calculation for children"""
+    if bmi <= 15.5:
+        return ("\nYou are underweight, your BMI is %0.0f" % (bmi))
+    elif bmi > 15.5 and bmi <= 19.9:
+        return ("\nYou are at a normal weight, your BMI is %0.0f" % (bmi))
+    elif bmi > 19.9 and bmi <= 22.9:
+        return ("\nYou are overweight, your BMI is %0.0f" % (bmi))
+    elif bmi >= 23:
+        return ("\nYou are obese, your BMI is %0.0f" % (bmi))
+    else:
+        return ("Insufficient data, input information again.")
+
+
+bmi_child()
+
+
+# Data Output
+def bmi_output():
+    """Defines BMI calculation and displays information properly"""
+    if age < 18:
+        print(bmi_child)
+    elif age >= 18:
+        print(bmi_adult)
+    else:
+        print("Insufficient data, input information again.")
+
+
+bmi_output()
