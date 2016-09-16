@@ -10,8 +10,6 @@ def main():
     weight = 0
     height = 0
     bmi = 0
-    bmi_child = 0
-    bmi_adult = 0
     bmi_output = 0
 
 
@@ -29,8 +27,8 @@ main()
 
 
 # Data output for adults
-def bmi_adult():
-    """Defines BMI calculation for adults"""
+def bmi_output():
+    """Defines BMI calculation for BMI"""
     if bmi <= 18.5:
         print("\nYou are underweight, your BMI is %0.0f" % (bmi))
     elif bmi > 18.5 and bmi <= 24.9:
@@ -39,38 +37,6 @@ def bmi_adult():
         print("\nYou are overweight, your BMI is %0.0f" % (bmi))
     elif bmi >= 30:
         print("\nYou are obese, your BMI is %0.0f" % (bmi))
-    else:
-        print("Insufficient data, input information again.")
-
-
-bmi_adult()
-
-
-# Data output for children
-def bmi_child():
-    """Defines BMI calculation for children"""
-    if bmi <= 15.5:
-        return ("\nYou are underweight, your BMI is %0.0f" % (bmi))
-    elif bmi > 15.5 and bmi <= 19.9:
-        return ("\nYou are at a normal weight, your BMI is %0.0f" % (bmi))
-    elif bmi > 19.9 and bmi <= 22.9:
-        return ("\nYou are overweight, your BMI is %0.0f" % (bmi))
-    elif bmi >= 23:
-        return ("\nYou are obese, your BMI is %0.0f" % (bmi))
-    else:
-        return ("Insufficient data, input information again.")
-
-
-bmi_child()
-
-
-# Data Output
-def bmi_output():
-    """Defines BMI calculation and displays information properly"""
-    if age < 18:
-        print(bmi_child)
-    elif age >= 18:
-        print(bmi_adult)
     else:
         print("Insufficient data, input information again.")
 
